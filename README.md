@@ -1,37 +1,31 @@
 # 全自动B站用户名组成歌词+视频渲染生成
 
-#### 介绍
+### 介绍
 全自动B站用户名组成歌词+视频渲染生成
 
-#### 软件架构
-软件架构说明
+自动调用 bilibili API 获取搜索结果
 
+通过分词和加权贪心算法，智能生成最优组合结果
 
-#### 安装教程
+自动根据结果渲染视频，可在视频中显示头像、用户名、个人简介等信息
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+### 安装教程
 
-#### 使用说明
+安装依赖
+```
+pip install -r requirement.txt
+```
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+此外需要安装 `ffmpeg` 以合并图像与声音
 
-#### 参与贡献
+### 使用说明
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+1.  下载歌词 `lrc` 格式文件，命名为 `music.lrc`，放置于根目录
+2.  下载视频 `mp4` 格式文件，命名为 `video.mp4`，放置于根目录
+3.  运行 `python calc.py`，生成 `res.json` 中间文件，此文件为自动爬取并组成的用户名，可以进行修改
+4.  运行 `python render.py`，渲染出视频 `final.mp4`
 
+### 样例
 
-#### 特技
+![](example.jpg)
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
