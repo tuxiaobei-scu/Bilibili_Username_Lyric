@@ -63,7 +63,6 @@ def find_bili_user(target):
     if best == inf:
         return {'score': inf, 'users': []}
     #print(target, best, res['uname'])
-    #print({'score': best, 'users': [res]})
     return {'score': best, 'users': [res]}
 
 
@@ -113,13 +112,3 @@ for s in f:
     output.append(res)
     open('res.json', 'w', encoding='utf-8').write(json.dumps(output, indent=4,
                                                              separators=(',', ': '), ensure_ascii=False))
-# print(list(jieba.cut('迎着风浪去追逐梦想')))
-
-#res = calc(list(jieba.cut('聪明勇敢不断的成长')))
-# for p in res['users']:
-# print(p['uname'])
-# find_bili_user('团结一致')
-#p = list(jieba.cut('团结一致友爱的力量'))
-# print(p)
-#p = list(jieba.cut('我们跨越时空拯救世界'))
-# print(p)

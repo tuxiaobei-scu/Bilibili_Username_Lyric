@@ -20,7 +20,7 @@ pip install -r requirement.txt
 
 ### 使用说明
 
-1.  下载歌词 `lrc` 格式文件，命名为 `music.lrc`，放置于根目录
+1.  下载歌词 `lrc` 格式文件，命名为 `music.lrc`，删去无关部分（如歌手信息，歌曲名称）放置于根目录
 2.  下载视频 `mp4` 格式文件，命名为 `video.mp4`，放置于根目录
 3.  运行 `python calc.py`，生成 `res.json` 中间文件，此文件为自动爬取并组成的用户名，可以进行修改
 4.  运行 `python render.py`，渲染出视频 `final.mp4`
